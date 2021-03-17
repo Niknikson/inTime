@@ -1,16 +1,17 @@
 import React from 'react';
-import { Container } from '@material-ui/core';
-import Header from './Components/Header/Header';
 import Main from './Components/Main/Main'
+import { BrowserRouter } from 'react-router-dom';
+import s from "./index.module.css";
+
 
 const App = () => {
+
   return (
-    <>
-      <Header />
-      <Container maxWidth="lg">
+    <BrowserRouter>
+      <div className={s.container}>
         <Main />
-      </Container>
-    </>
+      </div>
+    </BrowserRouter>
   );
 };
 
