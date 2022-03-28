@@ -1,6 +1,7 @@
 .button {
-    background-color: #0a0a23;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    transition: .5s;
+    overflow: hidden;
 }
