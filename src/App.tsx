@@ -1,25 +1,15 @@
 import React from 'react';
-import Button from './components/Button/Button';
+import { Button } from './components/Button/Button';
 
 const App = () => {
     return (
         <div>
             <h1>inTime</h1>
-            <Button
-                border="3px solid #218294"
-                backgroundColor="#fff"
-                color="#218294"
-                height="60px"
-                onClick={() => console.log("You clicked on the pink circle!")}
-                radius="none"
-                width="250px"
-                children="Button"
-                fontSize="30px" 
-                textDecoration="none"
-                display="block"
-                lineHeight="60px"
-                fontFamily="Arial, sans-serif"
-            />
+           <Button icon="fa fa-user fa-lg fa-fw" 
+                   type='button' 
+                   size='large' 
+                   theme='success' 
+                   children='button' />
         </div>
     );
 };
