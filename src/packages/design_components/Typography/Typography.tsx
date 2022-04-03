@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import styles from './typography.module.css';
+import styles from './typography.module.scss';
 
 type ElementType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'div' | 'span';
 type Size = 's8' | 's10' | 's12' | 's14' | 's16' | 's18' | 's20' | 's22' | 's24';
@@ -9,13 +9,13 @@ type Props = {
     id?: string;
     size?: Size;
     color?: Color;
-    children: string | Node;
+    children: string | number | Node;
     elementType?: ElementType;
 };
 
 const Typography: React.FC<Props> = ({
     id,
-    size = '8',
+    size = 's8',
     color = 'black',
     children,
     elementType: Element = 'div',

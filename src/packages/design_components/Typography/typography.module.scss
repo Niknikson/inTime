@@ -1,0 +1,48 @@
+@import "../../styles/variable_color.scss";
+@import "../../styles/font.scss";
+
+.typography {
+}
+
+.black {
+    color: $mainText;
+}
+.red {
+    color: $dangerText;
+}
+.green {
+    color: $successText;
+}
+.blue {
+    color: $primaryText;
+}
+.grey {
+    color: $disabled;
+}
+.s8 {
+    font-size: $f8;
+}
+.s10 {
+    font-size: $f10;
+}
+.s12 {
+    font-size: $f12;
+}
+.s14 {
+    font-size: $f14;
+}
+.s16 {
+    font-size: $f16;
+}
+.s18 {
+    font-size: $f18;
+}
+.s20 {
+    font-size: $f20;
+}
+.s22 {
+    font-size: $f22;
+}
+.s24 {
+    font-size: $f24;
+}

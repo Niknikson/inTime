@@ -2,7 +2,7 @@ import Typography from './packages/design_components/Typography/Typography';
 
 const App = () => {
     return (
-        <Typography elementType='div' size='s20' color='blue'>
+        <Typography elementType='h1' size='s24' color='blue'>
             inTime
         </Typography>
     );
