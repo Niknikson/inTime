@@ -8,7 +8,6 @@ type ButtonSize = 'small' | 'medium' | 'large' | 'default';
 type ButtonTheme = 'success' | 'primary' | 'secondary';
 
 type Props = {
-    icon?: string;
     type: ButtonType;
     size: ButtonSize;
     theme: ButtonTheme;
@@ -21,7 +20,6 @@ type Props = {
 }
 
 export const Button:FC<Props> = ({
-   icon = '',
    children = '',
    iconType = false,
    disabled = false,
@@ -37,8 +35,7 @@ export const Button:FC<Props> = ({
     }, className)
     return(
         <div>
-            <button type={type} onClick={onClick} disabled={disabled} className={classProps}>
-                {icon && <i className={icon} />} 
+            <button type={type} onClick={onClick} disabled={disabled} className={classProps}> 
                 {children}
             </button>
         </div>

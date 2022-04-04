@@ -5,8 +5,7 @@ const App = () => {
     return (
         <div>
             <h1>inTime</h1>
-           <Button icon="fa fa-user fa-lg fa-fw" 
-                   type='button' 
+           <Button type='button' 
                    size='large' 
                    theme='success' 
                    children='button' />
