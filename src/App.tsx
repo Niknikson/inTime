@@ -1,10 +1,32 @@
-import Typography from './packages/design_components/Typography/Typography';
+import React from 'react';
+import { GrGoogle } from 'react-icons/gr';
+
+import { Button } from './packages/design_components/Button/Button';
+import FullwidthButton from './packages/design_components/FullwidthButton/FullwidthButton';
+import IconButton from './packages/design_components/IconButton/IconButton';
 
 const App = () => {
     return (
-        <Typography elementType='h1' size='s24' color='blue'>
-            inTime
-        </Typography>
+        <div>
+            <h1>inTime</h1>
+            <div>
+                <Button type='button'
+                    size='large'
+                    theme='success'>
+                    {'Button'}
+                </Button>
+            </div>
+            <div>
+                <IconButton size='large'>
+                    {<GrGoogle />}
+                </IconButton>
+            </div>
+            <div>
+                <FullwidthButton type="button" size='large' theme='success' fullwidth>
+                    {Button}
+                </FullwidthButton>
+            </div>
+        </div>
     );
 };
 

@@ -1,0 +1,69 @@
+@import '../../../packages/styles/background.scss';
+@import '../../../packages/styles/colors.scss';
+@import '../../../packages/styles/font.scss';
+
+$icon-size-small	  : 40px;
+$icon-size-medium	  : 60px;
+$icon-size-large	  : 80px;
+
+$border-radius: 0.5;//15% = 0.15, 50% = 0.50 etc.
+
+.iconButton {
+    display: block;
+    overflow: hidden;
+    line-height: 50%;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: $dark-grey-color;
+    border: 5px solid $iconBorder;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+
+    i {
+        position: relative;
+        z-index: 2;
+    }
+
+    &:after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: $backgroundAfter;
+        transition: all .35s;
+      }
+
+      &:hover{
+        color: $white;
+      }
+
+      &:hover:after{
+        width: 100%;
+        height: 100%;
+      }
+}
+
+.small {
+    font-size: $f12;
+    width: $icon-size-small;
+    height: $icon-size-small;
+    border-radius: $icon-size-small * $border-radius;
+}
+
+.medium {
+    font-size: $f18;
+    width: $icon-size-medium;
+    height: $icon-size-medium;
+    border-radius: $icon-size-medium * $border-radius;
+}
+
+.large {
+    font-size: $f24;
+    width: $icon-size-large;
+    height: $icon-size-large;
+    border-radius: $icon-size-large * $border-radius;
+}
