@@ -2,15 +2,15 @@
 @import '../../../packages/styles/font.scss';
 @import '../../../packages/styles/font-family.scss';
 
-$main-color: $blue1;
+$primaryBackground: $blue1;
 $primary-hover: $blue2;
 $secondary-color: $crimson;
-$secondary-hover: $red;
+$secondary-hover: $red3;
 $success-color: $green;
 $success-hover: $green2;
 
 .center {
-    position: absolute;
+    position: relative;
 }
 
 .button {
@@ -69,8 +69,8 @@ $success-hover: $green2;
 // Theme
 .primary {
     color: $white;
-    background: $main-color;
-    border: 1px solid $main-color;
+    background: $primaryBackground;
+    border: 1px solid $primaryBackground;
     transition: color 0.3s ease, background 0.3 ease;
 
     &:hover {

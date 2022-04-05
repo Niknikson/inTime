@@ -17,11 +17,11 @@ type Props = {
 const IconButton:FC<Props> = ({
     children = '',
     disabled = false,
-    size = 'medium',
+    size = 'small',
     className = '',
     onClick
 }) => {
-    const classProps = classNames(style.iconButton, style[size])
+    const classProps = classNames(style.iconButton, style[size]);
     return (
         <button className={classProps} onClick={onClick} disabled={disabled}>
             <i>
