@@ -7,15 +7,25 @@ $successBackground: $green;
 $successBackgroundHover: $green2;
 $dangerBackground: $red1;
 $dangerBackgroundHover: $red2;
-
+$backgroundInput: $white;
 
 
 // Button Icon
 $backgroundAfter: $red4;
 
-// Border
+// Border Button
 $primaryBorder: $blue;
 $successBorder: $green;
 $iconBorder: $dark-grey-color;
 $fullwidthBorder: $black;
 
+// Border Span
+$borderSpan: $grey4;
+$borderSpanFocus: $blue5;
+
+// Border Bottom
+$borderInput: $blue3;
+
+// Span Background
+$spanBackground: $grey3;
+$spanBackgroundFocus: $blue;
