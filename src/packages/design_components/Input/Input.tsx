@@ -5,6 +5,7 @@ import style from './Input.module.scss';
 import { IconType } from 'react-icons/lib';
 
 type Size = 'small' | 'medium' | 'large' | 'fullwidth';
+type Theme = 'primary' | 'secondary' | 'success';
 
 type Props = {
     Icon?: IconType;
@@ -13,9 +14,10 @@ type Props = {
     disabled?: boolean;
     value: string;
     span?: string;
-    handleChange?: () => void;
+    handleChange: () => void;
     size: Size; 
     placeholder?: string;
+    theme?: Theme;
 }
 
 const Input:FC<Props> = ({
@@ -27,14 +29,18 @@ const Input:FC<Props> = ({
     span,
     handleChange,
     size = 'medium',
-    placeholder = ''
+    placeholder = '',
+    theme = 'primary',
 }) => {
 
-    const classProps = classNames(style.input, style[`${size}Input`]);
+    const classProps = classNames(style.input, style[`${size}Input`], style[`${theme}Input`], {
+        [style.disabled]: disabled,
+    });
     const classSpan = classNames(style.span, style[`${size}Span`]);
+    const classFormGroup = classNames(style.formGroup, style[`${theme}Span`]);
 
     return(
-        <div className={style.formGroup}>
+        <div className={classFormGroup}>
             <div className={classSpan}>
                 {Icon && <i>{<Icon />} </i>}
                 {span && <span>{span}</span>}
@@ -44,7 +50,8 @@ const Input:FC<Props> = ({
                    type={type}
                    name={name}
                    disabled={disabled}
-                   onChange={handleChange}/>
+                   onChange={handleChange}
+                   value={value}/>
         </div>
     );
 }

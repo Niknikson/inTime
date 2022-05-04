@@ -20,7 +20,6 @@
     }
     &:focus {
         outline: none;
-        border-color: $borderInput;
     }
 }
 
@@ -46,15 +45,68 @@
         text-align: center;
         line-height: 25px;
         color: $grey1;
-        background: $spanBackground;
         border: 1px solid $borderSpan;
         transition: background .3s ease, border .3s ease, color .3s ease;
     }
     &:focus-within {
         & > .span {
             color: $white;
+        }
+    }
+}
+
+// Input Theme
+.primaryInput {
+    &:focus {
+        border-color: $borderInput;
+    }
+}
+
+.secondaryInput {
+    &:focus {
+        border-color: $red4;
+    }
+}
+
+.successInput {
+    &:focus {
+        border-color: $green;
+    }
+}
+
+// Span Theme
+.primarySpan {
+    & > .span {
+        background: $borderSpan; 
+    }
+    &:focus-within {
+        & > .span {
             background: $spanBackgroundFocus;
             border-color: $borderSpanFocus;
+        }
+    }
+}
+
+.secondarySpan {
+    & > .span {
+        background: $borderSpan; ; 
+    }
+    &:focus-within {
+        & > .span {
+            background: $secondarySpan;
+            border-color: $secondarySpan;
+        }
+    }
+}
+
+.successSpan {
+    & > .span {
+        background: $borderSpan; ; 
+    }
+    &:focus-within {
+        & > .span {
+            background: $successSpan;
+            border-color: $successSpan;
         }
     }
 }
